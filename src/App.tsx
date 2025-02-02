@@ -1,6 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, ChevronLeft, ChevronRight, Menu, X, Award, Users, Clock, Globe, Shield, Zap } from 'lucide-react';
 
+
+import bituImage from './bitu.jpg';  // Import images if in src
+import tazimImage from './tazim.jpg';
+import tj1Image from './tj1.jpg';
+
+import image2 from './2.jpg';
+import image3 from './3.jpg';
+
+import image1 from './1.jpg';  // Import image from src folder
+
+
+
 function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +23,7 @@ function App() {
         name: "Akhlack-Uz-Zaman(Bitu)",
         position: "CEO",
         info: "Leading our vision for excellence in telecom solutions.",
-        image: "src/bitu.jpg",
+        image: bituImage,  // Use imported image
         email: "aaz.bitu@gmail.com",
         phone: "01875-553222"
       },
@@ -19,7 +31,7 @@ function App() {
         name: "Tazim Babu",
         position: "CEO",
         info: "Driving innovation and growth in our services.",
-        image: "src/tazim.jpg",
+        image: tazimImage,  // Use imported image
         email: "tazimbabu@gmail.com",
         phone: "01913-00000"
       },
@@ -27,7 +39,7 @@ function App() {
         name: "Turjo Rakib",
         position: "Manager",
         info: "Ensuring smooth operations and customer satisfaction.",
-        image: "src/tj1.jpg",
+        image: tj1Image,  // Use imported image
         email: "turjorakib@gmail.com",
         phone: "01830-107070"
       }
@@ -171,11 +183,12 @@ function App() {
               </div>
               
               <div className="hidden lg:block animate-slideInRight">
-                <img 
-                  src="src/1.jpg" 
-                  alt="Telecom Solutions"
-                  className="rounded-2xl shadow-2xl transform -rotate-6 hover:rotate-0 transition-transform duration-500"
-                />
+              <img 
+                src={image1}  // Use imported image
+                alt="Telecom Solutions"
+                className="rounded-2xl shadow-2xl transform -rotate-6 hover:rotate-0 transition-transform duration-500"
+              />
+
               </div>
             </div>
           </div>
@@ -212,15 +225,16 @@ function App() {
                     className="rounded-2xl shadow-lg hover-card transform translate-y-12"
                   />
                   <img 
-                    src="src/2.jpg" 
-                    alt="Meeting"
+                    src={image2} 
+                    alt="Meeting" 
                     className="rounded-2xl shadow-lg hover-card transform translate-y--12"
                   />
                   <img 
-                    src="src/3.jpg" 
-                    alt="Business"
+                    src={image3} 
+                    alt="Business" 
                     className="rounded-2xl shadow-lg hover-card"
                   />
+
                 </div>
               </div>
 
